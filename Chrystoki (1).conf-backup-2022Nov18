@@ -1,0 +1,78 @@
+Chrystoki2 = {
+   LibUNIX = /usr/safenet/lunaclient/lib/libcklog2.so;
+   LibUNIX64 = /usr/safenet/lunaclient/lib/libcklog2.so;
+}
+
+Luna = {
+  DefaultTimeOut = 500000;
+  PEDTimeout1 = 100000;
+   PEDTimeout2 = 200000;
+  PEDTimeout3 = 10000;
+  KeypairGenTimeOut = 2700000;
+  CloningCommandTimeOut = 300000;
+  CommandTimeOutPedSet = 720000;
+}
+
+CardReader = {
+  RemoteCommand = 1;
+}
+
+Misc = {
+  PE1746Enabled = 0;
+   ToolsDir = /usr/safenet/lunaclient/bin;
+   PartitionPolicyTemplatePath = /usr/safenet/lunaclient/data/partition_policy_templates;
+   ProtectedAuthenticationPathFlagStatus = 0;
+}
+LunaSA Client = {
+   ReceiveTimeout = 20000;
+   SSLConfigFile = /usr/safenet/lunaclient/bin/openssl.cnf;
+   ClientPrivKeyFile = /usr/safenet/lunaclient/cert/client/10.93.102.237Key.pem;
+   ClientCertFile = /usr/safenet/lunaclient/cert/client/10.93.102.237.pem;
+   ServerCAFile = /usr/safenet/lunaclient/cert/server/CAFile.pem;
+   NetClient = 1;
+   HtlDir = /usr/safenet/lunaclient/htl/;
+   ServerName00 = 10.91.53.7;
+   ServerPort00 = 1792;
+   ServerHtl00 = 0;
+   ServerName01 = 10.91.53.6;
+   ServerPort01 = 1792;
+   ServerHtl01 = 0;
+   ServerName02 = 10.91.53.29;
+   ServerPort02 = 1792;
+   ServerHtl02 = 0;
+   TCPKeepAlive = 1;
+}
+VirtualToken = {
+   VirtualToken00Label = HA_HSMUATMARS;
+   VirtualToken00SN = 11542996325908;
+   VirtualToken00Members = 1542996325908;
+}
+HASynchronize = {
+   HA_HSMUATMARS = 1;
+}
+HAConfiguration = {
+   HAOnly = 1;
+   reconnAtt = 10;
+   AutoReconnectInterval = 60;
+   haLogPath = /usr/safenet/lunaclient;
+   logLen = 262144;
+   haLogStatus = enabled;
+}
+Secure Trusted Channel = {
+   ClientTokenLib = /usr/safenet/lunaclient/lib/libSoftToken.so;
+   SoftTokenDir = /usr/safenet/lunaclient/configData/token;
+   ClientIdentitiesDir = /usr/safenet/lunaclient/data/client_identities;
+   PartitionIdentitiesDir = /usr/safenet/lunaclient/data/partition_identities;
+}
+CkLog2 = {
+   Enabled = 1;
+   NewFormat = 1;
+   File = /tmp/cklog.txt;
+   FileSize = 100;
+   Error = /tmp/error.txt;
+   LibUNIX = /usr/safenet/lunaclient/lib/libCryptoki2.so;
+   LibUNIX64 = /usr/safenet/lunaclient/lib/libCryptoki2_64.so;
+}
+Presentation = {
+OneBaseSlotId=1;
+}
